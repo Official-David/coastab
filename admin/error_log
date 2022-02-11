@@ -1,0 +1,6 @@
+[01-Sep-2021 10:42:04 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/getcoast/public_html/admin/connection.php on line 7
+[13-Oct-2021 13:12:40 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/getcoast/public_html/admin/connection.php on line 7
+[13-Oct-2021 13:12:44 UTC] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/getcoast/public_html/admin/connection.php on line 7
+[13-Oct-2021 13:12:46 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/getcoast/public_html/admin/connection.php on line 7
+[13-Oct-2021 13:12:48 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/getcoast/public_html/admin/connection.php on line 7
+[13-Oct-2021 13:12:52 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/getcoast/public_html/admin/connection.php on line 7

@@ -291,7 +291,7 @@ $pic = $ro["file_name"];
                                             </div>
                                         </div>
 
-                                        <div class="card card-sm">
+                                        <!-- <div class="card card-sm">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between mb-5">
                                                     <div>
@@ -303,7 +303,7 @@ $pic = $ro["file_name"];
                                                 <span class="d-block display-4 text-dark mb-5"><?php echo "$ ".number_format($previous_balance,2); ?></span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

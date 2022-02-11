@@ -193,9 +193,6 @@ VALUES ('$user_id', '$ootp', '$times', '$tok')";
 
                                      if ($_POST['amount'] <= $limit && $account_status == "Active" && $_POST['amount'] <= ($account_balance)) {
                                                             $old_balance = $account_balance;
-                                                            $bal = "UPDATE customer SET previous_balance =
-                                    '$old_balance' WHERE user_id = '$user_id'";
-                                                            $bals = mysqli_query($myConn, $bal);
                                                             $account_name = $_POST['recipient'];
                                                             $amountS = $_POST['amount'];
                                                             $distract = $_POST['descrip'];

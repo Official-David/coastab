@@ -33,6 +33,14 @@ if (isset($_SESSION['admin'])) {
         $account_status = "On hold";
     }
 
+    if ($account_status == 4) {
+        $account_status = "Account Blocked";
+    }
+
+    if ($account_status == 5) {
+        $account_status = "Not Activated";
+    }
+    
     $SQL = "SELECT * FROM images WHERE user_id = '$user_id'";
 
     $results = mysqli_query($myConn, $SQL);

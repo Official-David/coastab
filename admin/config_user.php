@@ -222,29 +222,18 @@ if (isset($_POST['addhistory'])) {
 
     $amount = $_POST['amount'];
 
+    $description = $_POST['description'];
+
     $date = $_POST['date'];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     if ($transaction_type == 0) {
 
 
 
-        $add = "INSERT INTO history (user_id, amount, account_number, transaction_type, date)
+        $add = "INSERT INTO history (user_id, amount, account_number, transaction_type, description, date)
 
-										 VALUES('$user_id', '$amount', '$account_number', '0', '$date')";
+										 VALUES('$user_id', '$amount', '$account_number', '0', '$description', '$date')";
 
         $result = mysqli_query($myConn, $add);
 
@@ -262,9 +251,9 @@ if (isset($_POST['addhistory'])) {
 
 if ($transaction_type == 1) {
 
-    $add = "INSERT INTO history (user_id, amount, account_name, transaction_type, date)
+    $add = "INSERT INTO history (user_id, amount, account_name, account_number, transaction_type, description, date)
 
-										 VALUES('$user_id', '$amount', '$account_name', '1', '$date')";
+										 VALUES('$user_id', '$amount', '$account_name', '************', '1', '$description', '$date')";
 
     $result = mysqli_query($myConn, $add);
 
@@ -286,9 +275,9 @@ if ($transaction_type == 1) {
 
 if ($transaction_type == 2) {
 
-    $add = "INSERT INTO history (user_id, amount, account_name, transaction_type, date)
+    $add = "INSERT INTO history (user_id, amount, account_name, transaction_type, description, date)
 
-										 VALUES('$user_id', '$amount', '$account_name', '2', '$date')";
+										 VALUES('$user_id', '$amount', '$account_name', '2', '$description', '$date')";
 
     $result = mysqli_query($myConn, $add);
 

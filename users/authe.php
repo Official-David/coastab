@@ -22,7 +22,6 @@ if (isset($_SESSION['admin'])) {
     $email = $row['email'];
     $phone_number = $row['phone_number'];
     $account_balance = $row['account_balance'];
-    $previous_balance = $row['previous_balance'];
     $account_number = $row['account_number'];
     $limit = $row['transaction_limit'];
     $account_status = $row['account_status'];
@@ -42,6 +41,10 @@ if (isset($_SESSION['admin'])) {
 
     if ($account_status == 4) {
         $account_status = "Account Blocked";
+    }
+
+    if ($account_status == 5) {
+        $account_status = "Not Activated";
     }
 
 
@@ -72,7 +75,7 @@ if (isset($_SESSION['admin'])) {
     if (isset($_POST['transfer'])) {
         $tok = rand(10000, 99999);
         $ootp = rand(10000, 99999);
-        $times = date();
+        $times = date('y');
         $trans = "UPDATE customer SET token =
 '$tok' WHERE user_id = '$user_id'";
         $tan = mysqli_query($myConn, $trans);
@@ -241,6 +244,21 @@ VALUES ('$user_id', '$ootp', '$times', '$tok')";
                                                 </script>
                                             <?php
 
+                                                        }
+                                                        if ($account_status == "Not Activated") {
+                                                            ?>
+                                                                <script>
+                                                                    swal({
+                                                                        title: "Account is not activated",
+                                                                        text: "Kindly contact support@getcoastaplc.com to rectify",
+                                                                        icon: "warning",
+                                                                        button: "OK",
+                                                                    }).then(function() {
+                                                                        window.location = "dashboard.php";
+                                                                    });;
+                                                                </script>
+                                                            <?php
+                
                                                         }
 
                                                         if ($account_status == "On hold") {

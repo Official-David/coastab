@@ -16,7 +16,6 @@ $last_name = $row['last_name'];
 $email = $row['email'];
 $phone_number = $row['phone_number'];
 $account_balance = $row['account_balance'];
-$previous_balance = $row['previous_balance'];
 $account_number = $row['account_number'];
 $account_status = $row['account_status'];
 $rows = mysqli_num_rows($result);

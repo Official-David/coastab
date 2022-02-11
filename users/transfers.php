@@ -20,7 +20,6 @@ if (isset($_SESSION['admin'])) {
     $email = $row['email'];
     $phone_number = $row['phone_number'];
     $account_balance = $row['account_balance'];
-    $previous_balance = $row['previous_balance'];
     $account_number = $row['account_number'];
     $limit = $row['transaction_limit'];
     $account_status = $row['account_status'];

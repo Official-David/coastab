@@ -106,13 +106,12 @@ if (isset($_SESSION['userid'])) {
                                                                     if ($account_status == 4) {
                                                                         echo "Blocked";
                                                                     }
+                                                                    if ($account_status == 5) {
+                                                                        echo "Not Activated";
+                                                                    }
 
 
                                                                     ?>
-
-
-
-
 
                                                                 </td>
                                                                 <td class="left hidden-phone"><a class="btn btn-primary" href="#myModalview<?php echo $user_id; ?>" data-toggle="modal"> View </a><br></td>
@@ -198,7 +197,8 @@ if (isset($_SESSION['userid'])) {
                                                             <label class="col-sm-3 control-label">Account Status</label>
                                                             <div class="col-sm-9">
                                                                 <select name="account_status" class="form-control" id="">
-                                                                    <option selected="selected" value="1">Active</option>
+                                                                    <option selected="selected" value="5">Not Activated</option>
+                                                                    <option value="1">Active</option>
                                                                     <option value="2">Inactive</option>
                                                                     <option value="3">On Hold</option>
                                                                     <option value="4">Blocked</option>
@@ -218,7 +218,7 @@ if (isset($_SESSION['userid'])) {
                                                         <!--/form-group-->
 
                                                         <div class="form-group">
-                                                            <label class="col-sm-3 control-label">last Name</label>
+                                                            <label class="col-sm-3 control-label">Last Name</label>
                                                             <div class="col-sm-9">
                                                                 <input type="text" name="lastname" class="form-control" value="" required>
                                                             </div>
@@ -352,6 +352,13 @@ if (isset($_SESSION['userid'])) {
                                                             </div>
                                                         </div>
                                                         <!--/form-group-->
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Description</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" name="description" class="form-control" value="" required>
+                                                            </div>
+                                                        </div>
+                                                        <!--/form-group-->
 
                                                         <div class="form-group">
                                                             <label class="col-sm-3 control-label">Date</label>
@@ -453,7 +460,7 @@ if (isset($_SESSION['userid'])) {
                                                             <!--/form-group-->
 
                                                             <div class="form-group">
-                                                                <label class="col-sm-3 control-label">last Name</label>
+                                                                <label class="col-sm-3 control-label">Last Name</label>
                                                                 <div class="col-sm-9">
                                                                     <input type="text" name="lastname" class="form-control" value="<?php echo $last_name; ?>" disabled>
                                                                 </div>
@@ -598,7 +605,8 @@ if (isset($_SESSION['userid'])) {
                                                                 <label class="col-sm-3 control-label">Account Status</label>
                                                                 <div class="col-sm-9">
                                                                     <select name="account_status" class="form-control" id="">
-                                                                        <option selected="selected" value="1">Active</option>
+                                                                        <option selected="selected" value="5">Not Activated</option>
+                                                                        <option value="1">Active</option>
                                                                         <option value="2">Inactive</option>
                                                                         <option value="3">On Hold</option>
                                                                         <option value="4">Blocked</option>
@@ -618,7 +626,7 @@ if (isset($_SESSION['userid'])) {
                                                             <!--/form-group-->
 
                                                             <div class="form-group">
-                                                                <label class="col-sm-3 control-label">last Name</label>
+                                                                <label class="col-sm-3 control-label">Last Name</label>
                                                                 <div class="col-sm-9">
                                                                     <input type="text" name="lastname" class="form-control" value="<?php echo $last_name; ?>" required>
                                                                 </div>
@@ -626,7 +634,7 @@ if (isset($_SESSION['userid'])) {
                                                             <!--/form-group-->
 
                                                             <div class="form-group">
-                                                                <label class="col-sm-3 control-label">Mother's Name</label>
+                                                                <label class="col-sm-3 control-label">Secret Pin</label>
                                                                 <div class="col-sm-9">
                                                                     <input type="text" name="mothersname" class="form-control" value="<?php echo $mothersname; ?>" required>
                                                                 </div>
@@ -822,15 +830,7 @@ if (isset($_SESSION['userid'])) {
                                                             if ($transaction_type == 2) {
                                                                 echo "Withdrawal";
                                                             }
-
-
-
                                                             ?>
-
-
-
-
-
                                                         </td>
                                                         <td class="left hidden-phone"><?php echo $amount; ?></td>
                                                         <td><?php echo $date; ?></td>

@@ -17,8 +17,6 @@ if (isset($_POST['adduser'])) {
 
     $account_balance = mysqli_escape_string($myConn, $_POST['account_balance']);
 
-    $previous_balance = mysqli_escape_string($myConn, $_POST['previous_balance']);
-
     $account_status = mysqli_escape_string($myConn, $_POST['account_status']);
 
     $password = mysqli_escape_string($myConn, $_POST['password']);
@@ -115,9 +113,9 @@ if (isset($_POST['adduser'])) {
 
 
 
-    $add = "INSERT INTO customer (user_id, account_number, account_balance, previous_balance, password, first_name, last_name, mothers_name, sex, email, phone_number, account_status, address, date)
+    $add = "INSERT INTO customer (user_id, account_number, account_balance, password, first_name, last_name, mothers_name, sex, email, phone_number, account_status, address, date)
 
-										 VALUES('$user_id', '$account_number', '$account_balance', '$previous_balance', '$password', '$first_name', '$last_name', '$mothersname', '$sex', '$email', '$phone', '$account_status', '$address', now())";
+										 VALUES('$user_id', '$account_number', '$account_balance', '$password', '$first_name', '$last_name', '$mothersname', '$sex', '$email', '$phone', '$account_status', '$address', now())";
 
 
 
@@ -156,7 +154,6 @@ if (isset($_POST['edituser'])) {
 
     $account_balance = mysqli_escape_string($myConn, $_POST['account_balance']);
 
-    $previous_balance = mysqli_escape_string($myConn, $_POST['previous_balance']);
 
     $account_status = mysqli_escape_string($myConn, $_POST['account_status']);
 
@@ -184,7 +181,7 @@ if (isset($_POST['edituser'])) {
 
 
 
-    $update = "UPDATE customer SET user_id = '$user_id', first_name = '$first_name', password = '$password', last_name = '$last_name', mothers_name = '$mothersname', sex = '$sex', email = '$email', phone_number = '$phone',address = '$address', account_balance = '$account_balance', previous_balance = '$previous_balance', account_status = '$account_status' WHERE user_id = '$user_id'";
+    $update = "UPDATE customer SET user_id = '$user_id', first_name = '$first_name', password = '$password', last_name = '$last_name', mothers_name = '$mothersname', sex = '$sex', email = '$email', phone_number = '$phone',address = '$address', account_balance = '$account_balance', account_status = '$account_status' WHERE user_id = '$user_id'";
 
 
 
